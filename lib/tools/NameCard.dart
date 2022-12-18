@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '../Screens/bioScreen.dart';
 import '../Screens/personScreen.dart';
 class NameCard extends StatelessWidget {
   final String name;
