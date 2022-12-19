@@ -3,6 +3,7 @@ import 'package:google_sign_in/google_sign_in.dart';
 import 'package:google_sign_in/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'managerScreen.dart';
 class inScreen extends StatelessWidget {
 
   final GoogleSignInAccount user;
@@ -60,6 +61,11 @@ class inScreen extends StatelessWidget {
                 children: [
                   Expanded(
                     child: InkWell(
+                      onTap:(){
+                        Navigator.push(context, MaterialPageRoute(builder: (context){
+                          return ManagerScreen();
+                        }));
+                      },
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Container(
