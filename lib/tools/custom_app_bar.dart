@@ -5,22 +5,20 @@ import 'dart:math' as math;
 
 class CustomAppBar extends StatefulWidget {
 
-  final VoidCallback toggleSidebar;
   final String appBarName;
 
-  const CustomAppBar({Key? key, required this.toggleSidebar,required this.appBarName});
+  const CustomAppBar({Key? key,required this.appBarName});
 
   @override
-  _CustomAppBarState createState() => _CustomAppBarState(appBarName,toggleSidebar);
+  _CustomAppBarState createState() => _CustomAppBarState(appBarName);
 }
 
 class _CustomAppBarState extends State<CustomAppBar> with SingleTickerProviderStateMixin{
 
   late final AnimationController _appBarAnimationController;
-  final VoidCallback toggleSidebar;
   final String appBarName;
 
-  _CustomAppBarState(this.appBarName,this.toggleSidebar);
+  _CustomAppBarState(this.appBarName);
 
   @override
   void initState() {

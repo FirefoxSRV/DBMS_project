@@ -47,7 +47,7 @@ class _adminScreenState extends State<adminScreen> {
         backgroundColor: Colors.black,
         body: Column(
           children: [
-            CustomAppBar(toggleSidebar: () {}, appBarName: "Welcome Administrator"),
+            CustomAppBar(appBarName: "Welcome Administrator"),
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.all(18.0),

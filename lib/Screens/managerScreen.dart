@@ -46,7 +46,7 @@ class _ManagerScreenState extends State<ManagerScreen> {
             backgroundColor: Colors.black,
             body: Column(
               children: [
-                CustomAppBar(toggleSidebar: () {}, appBarName: "Welcome Manager"),
+                CustomAppBar( appBarName: "Welcome Manager"),
                 Expanded(
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),

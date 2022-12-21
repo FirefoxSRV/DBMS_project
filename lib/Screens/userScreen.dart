@@ -48,7 +48,7 @@ class _UserScreenState extends State<UserScreen> {
             body: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                CustomAppBar(toggleSidebar: () {}, appBarName: "Welcome user !"),
+                CustomAppBar( appBarName: "Welcome user !"),
 
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,

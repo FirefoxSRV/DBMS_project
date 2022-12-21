@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'inScreen.dart';
 import 'package:google_sign_in/google_sign_in.dart';
