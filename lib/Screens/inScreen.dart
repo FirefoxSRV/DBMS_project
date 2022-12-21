@@ -1,5 +1,4 @@
 import 'dart:ui';
-
 import 'package:dbms/Screens/managerScreen.dart';
 import 'package:dbms/Screens/userScreen.dart';
 import 'package:flutter/material.dart';
@@ -10,14 +9,12 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import '../tools/passwordBox.dart';
 import 'adminScreen.dart';
 
-
-
-
 class inScreen extends StatelessWidget {
   final GoogleSignInAccount user;
   final VoidCallback onpress;
 
   const inScreen({Key? key, required this.user, required this.onpress}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     List<String> get = [];
@@ -113,82 +110,82 @@ class inScreen extends StatelessWidget {
                                 builder: (context) => BackdropFilter(
                                   filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
                                   child: AlertDialog(
-                                        shape: RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.circular(30),
-                                        ),
-                                        title: Text("Enter admin key :",style: GoogleFonts.quicksand(color: Colors.black87),),
-                                        content: Row(
-                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                          children: [
-                                            //Go to Tools/password_box for more info
-                                            Passw ordBox(inputController: PasswordDigit1),
-                                            SizedBox(width: 1,),
-                                            PasswordBox(inputController: PasswordDigit2),
-                                            SizedBox(width: 1,),
-                                            PasswordBox(inputController: PasswordDigit3),
-                                            SizedBox(width: 1,),
-                                            PasswordBox(inputController: PasswordDigit4),
-                                            SizedBox(width: 1,),
-                                            PasswordBox(inputController: PasswordDigit5),
-                                            SizedBox(width: 1,),
-                                            PasswordBox(inputController: PasswordDigit6),
-                                          ],
-                                        ),
-                                        actions: <Widget>[
-                                          TextButton(
-                                            onPressed: () {
-                                              if(passwordString=="123456"){
-                                                Navigator.push(context, MaterialPageRoute(builder: (context){
-                                                  return adminScreen();
-                                                }));
-                                              }
-                                              passwordString = "";
-                                              get = [];
-                                              get.addAll([
-                                                PasswordDigit1.text,
-                                                PasswordDigit2.text,
-                                                PasswordDigit3.text,
-                                                PasswordDigit4.text,
-                                                PasswordDigit5.text,
-                                                PasswordDigit6.text
-                                              ]);
-                                              for (int i = 0; i < 6; i++) {
-                                                passwordString += get[i];
-                                              }
-                                              if(passwordString=="123456"){
-                                                Navigator.pop(context);
-                                                Navigator.push(context, MaterialPageRoute(builder: (context){
-                                                  return adminScreen();
-                                                }));
-                                              }else{
-                                                showDialog(
-                                                    context: context,
-                                                    builder: (context)=>BackdropFilter(
-                                                      filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
-                                                      child: AlertDialog(
-                                                        shape: RoundedRectangleBorder(
-                                                          borderRadius: BorderRadius.circular(30)
-                                                        ),
-                                                        title: Text("Wrong key. Try Again!",style: GoogleFonts.quicksand(fontWeight: FontWeight.w700),textAlign: TextAlign.center,),
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(30),
+                                    ),
+                                    title: Text("Enter admin key :",style: GoogleFonts.quicksand(color: Colors.black87),),
+                                    content: Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        //Go to Tools/password_box for more info
+                                        PasswordBox(inputController: PasswordDigit1),
+                                        SizedBox(width: 1,),
+                                        PasswordBox(inputController: PasswordDigit2),
+                                        SizedBox(width: 1,),
+                                        PasswordBox(inputController: PasswordDigit3),
+                                        SizedBox(width: 1,),
+                                        PasswordBox(inputController: PasswordDigit4),
+                                        SizedBox(width: 1,),
+                                        PasswordBox(inputController: PasswordDigit5),
+                                        SizedBox(width: 1,),
+                                        PasswordBox(inputController: PasswordDigit6),
+                                      ],
+                                    ),
+                                    actions: <Widget>[
+                                      TextButton(
+                                        onPressed: () {
+                                          if(passwordString=="123456"){
+                                            Navigator.push(context, MaterialPageRoute(builder: (context){
+                                              return adminScreen();
+                                            }));
+                                          }
+                                          passwordString = "";
+                                          get = [];
+                                          get.addAll([
+                                            PasswordDigit1.text,
+                                            PasswordDigit2.text,
+                                            PasswordDigit3.text,
+                                            PasswordDigit4.text,
+                                            PasswordDigit5.text,
+                                            PasswordDigit6.text
+                                          ]);
+                                          for (int i = 0; i < 6; i++) {
+                                            passwordString += get[i];
+                                          }
+                                          if(passwordString=="123456"){
+                                            Navigator.pop(context);
+                                            Navigator.push(context, MaterialPageRoute(builder: (context){
+                                              return adminScreen();
+                                            }));
+                                          }else{
+                                            showDialog(
+                                                context: context,
+                                                builder: (context)=>BackdropFilter(
+                                                  filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
+                                                  child: AlertDialog(
+                                                    shape: RoundedRectangleBorder(
+                                                        borderRadius: BorderRadius.circular(30)
+                                                    ),
+                                                    title: Text("Wrong key. Try Again!",style: GoogleFonts.quicksand(fontWeight: FontWeight.w700),textAlign: TextAlign.center,),
 
-                                                      ),
-                                                    )
-                                                );
-                                              }
-                                              // Navigator.pop(context);
-                                            },
-                                            child: Container(
-                                              decoration: BoxDecoration(
-                                                  color: Colors.black,
-                                                  borderRadius: BorderRadius.circular(10)
-                                              ),
-
-                                              padding: const EdgeInsets.all(14),
-                                              child: Text("okay",style: GoogleFonts.quicksand(color: Colors.white),),
-                                            ),
+                                                  ),
+                                                )
+                                            );
+                                          }
+                                          // Navigator.pop(context);
+                                        },
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                              color: Colors.black,
+                                              borderRadius: BorderRadius.circular(10)
                                           ),
-                                        ],
+
+                                          padding: const EdgeInsets.all(14),
+                                          child: Text("okay",style: GoogleFonts.quicksand(color: Colors.white),),
+                                        ),
                                       ),
+                                    ],
+                                  ),
                                 ));
                             // Navigator.push(context, MaterialPageRoute(builder: (context){
                             //   return ManagerScreen();
@@ -303,3 +300,5 @@ class inScreen extends StatelessWidget {
     );
   }
 }
+
+
