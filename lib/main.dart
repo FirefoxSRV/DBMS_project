@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'Screens/mainScreen.dart';
-import 'Screens/personScreen.dart';
 import 'Screens/managerScreen.dart';
+import 'Screens/personScreen.dart';
+import 'Screens/adminScreen.dart';
+import 'Screens/userScreen.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async{
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -16,7 +18,8 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: MainScreen(),
-      // home:ManagerScreen()
+      // home:adminScreen(),
+      // home: UserScreen(),
     );
 
   }

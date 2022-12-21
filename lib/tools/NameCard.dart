@@ -3,7 +3,6 @@ import 'package:google_fonts/google_fonts.dart';
 import '../Screens/personScreen.dart';
 
 
-
 class NameCard extends StatelessWidget {
   final String name;
   final String roll;
@@ -15,8 +14,8 @@ class NameCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialButton(
-      onPressed: () {
+    return InkWell(
+      onTap: () {
         Navigator.of(context).push(MaterialPageRoute(builder: (context) => PersonScreen(name: name, url: url,instaId: instaId,IQ: IQ,about: about,)));
       },
       child: Container(

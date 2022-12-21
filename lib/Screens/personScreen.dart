@@ -35,7 +35,12 @@ class PersonScreen extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Icon(Icons.keyboard_arrow_left_sharp,size: 40,),
+                      InkWell(
+                        onTap: (){
+                          Navigator.pop(context);
+                        },
+                          child: Icon(Icons.keyboard_arrow_left_sharp,size: 40,)
+                      ),
                     ],
                   ),
                   SizedBox(height: 20,),

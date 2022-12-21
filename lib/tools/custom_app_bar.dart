@@ -80,7 +80,7 @@ class _CustomAppBarState extends State<CustomAppBar> with SingleTickerProviderSt
                           height: 150,
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(bottom:10.0),
+                          padding: const EdgeInsets.only(bottom:55.0),
                           child: Text(appBarName,textAlign: TextAlign.center,style: GoogleFonts.quicksand(fontSize: 25,color: Colors.white,fontWeight: FontWeight.w700),),
                         ),
                       ],
