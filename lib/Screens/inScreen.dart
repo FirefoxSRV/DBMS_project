@@ -230,6 +230,7 @@ class inScreen extends StatelessWidget {
                                         Expanded(
                                           child: InkWell(
                                             onTap:(){
+                                              Navigator.pop(context);
                                               Navigator.push(context, MaterialPageRoute(builder: (context){
                                                 return ManagerScreen();
                                               }));
@@ -251,6 +252,7 @@ class inScreen extends StatelessWidget {
 
                                           child: InkWell(
                                             onTap:(){
+                                              Navigator.pop(context);
                                               Navigator.push(context, MaterialPageRoute(builder: (context){
                                                 return UserScreen();
                                               }));
